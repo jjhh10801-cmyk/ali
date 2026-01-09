@@ -1,0 +1,63 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+
+
+int Consumption;
+int Priceperunit;
+int Total_bill;
+
+
+cout<<"enter electricity consumption(kwh) :";
+cin>>Consumption;
+
+//نحدد سعر الوحده حسب الاستهلاك
+
+if( Consumption<=80 )
+{
+    Priceperunit=3;
+}
+
+else if(  Consumption>80  &&  Consumption<180  )
+{
+    Priceperunit=5;
+}
+
+else 
+{
+    Priceperunit=8;
+}
+//حساب الفاتوره وخزنها
+Total_bill = (Consumption* Priceperunit);
+
+
+ //النتائج
+
+cout<<"your electricity Consumption ="<<Consumption<<endl;
+cout<<"Price per unit ="<<Priceperunit<<endl;
+cout<<"your Total bill ="<<Total_bill<<endl;
+
+//تقييم الاستهلاك
+
+if( Total_bill>=240  &&  Total_bill<=900  )
+{
+    cout<<"your electricity Consumption is normal";
+}
+
+else{
+cout<<"your electricity Consumption is high";
+}
+
+ return 0;   
+
+
+}
+
+
+
+
+
+
+
+
